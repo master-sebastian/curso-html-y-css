@@ -163,6 +163,66 @@
 					Video by Pavel Danilyuk from Pexels
 				</aside>
 			</section>
+			<section>
+				<aside>
+					<h2>Formularios</h2>
+					<hr>
+					<form action="" method="">
+						<label for="username">
+							<span>Nombre del usuario</span>
+							<input type="text" id="username" placeholder="Ingrese el nombre del usuario" autocomplete="off" required>
+						</label>
+						<label for="email-user">
+							<span>Correo electronico del usuario</span>
+							<input type="email" id="email-user" placeholder="Ingrese el correo electronico del usuario"  autocomplete="email" required>
+						</label>
+						<label for="password-user">
+							<span>Contraseña</span>
+							<input type="password" id="password-user" placeholder="Ingrese la contraseña del usuario" required>
+						</label>
+						<label for="date-time-user">
+							<span>Fecha y hora de envio a la editorial</span>
+							<input type="datetime-local" id="date-time-user" placeholder="Ingrese la fecha y hora de envio a la editorial" autocomplete="date-time-user" required>
+						</label>
+						<label for="date-user">
+							<span>Fecha de publicación</span>
+							<input type="date" id="date-user" placeholder="Ingrese la fecha de publicación" required>
+						</label>
+						<label for="time-user">
+							<span>Hora de publicacion</span>
+							<input type="time" id="time-user" placeholder="Ingrese la hora de publicación" required>
+						</label>
+						<label for="comment-user">
+							<span>Comentario</span>
+							<textarea  id="comment-user" cols="30" rows="10" placeholder="Ingrese el comentario del texto" required></textarea>
+						</label>
+						<label for="day-week">
+							<span>Dia de la semana</span>
+							<select id="day-week">
+								<option value="1">Lunes</option>
+								<option value="2">Martes</option>
+								<option value="3">Miercoles</option>
+								<option value="4">Jueves</option>
+								<option value="5">Viernes</option>
+								<optgroup label="Fin de semana">
+									<option value="6">Sabado</option>
+									<option value="7">Domingo</option>
+								</optgroup>
+							</select>
+						</label>
+						<label for="course">
+							<span>Cursos</span>
+							<input list="course">
+							<datalist id="course">
+								<option value="JavaScript"></option>
+								<option value="HTML"></option>
+								<option value="CSS"></option>
+							</datalist>
+						</label>
+						<input type="submit" value="Enviar">
+					</form>
+				</aside>
+			</section>
 		</main>
 		<footer>
 			<a href="https://www.google.com">Ir a google</a>
