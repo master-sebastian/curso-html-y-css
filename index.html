@@ -11,34 +11,54 @@
 	<head>
 		<!-- las etiqueta meta le daran cierta informacion al browser para que sepa como tratar a nuestro proyecto -->
 		<!-- La etiqueta meta con el atributo charset ermite que el navegador reconozca caracteres especiales  -->
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
 		<!-- La etiqueta meta con el atributo name y valor description le dira al navagador la informacion que paracera en la busqueda esta informacion tiene que estar depositada en el atributo content-->
-		<meta name="description" content="Este es una pagina que nos permita explicar todo lo refente a html 5" >
+		<meta name="description" content="Este es una pagina que nos permita explicar todo lo refente a html 5"/>
 		<!-- La etiqueta title le pondra el valor a la pestaña en el browser, claro que su valor tiene que estar dentro de esta etiqueta -->
 		<title>App message</title>
 		<!-- La etiqueta meta con el atributo name y valor robots se usa para el posicionamiento en los navegadores (SEO (Optimizacion en motores de busqueda)) le da autorizacion a los robots para ayudarnos a posicionar nuestro proyecto en las busquedas, le debe dar el nombre del archivo y la palabra follow-->
-		<meta name="robots" content="index,follow">
-		<link rel="stylesheet" href="css/app.css">
+		<meta name="robots" content="index,follow"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="stylesheet" href="css/app/global.css" />
+		<link rel="stylesheet" href="css/app/mobile.css" media="screen and (min-width: 0px) and (max-width: 599.99px)"/>
+		<link rel="stylesheet" href="css/app/tablet.css" media="screen and (min-width: 600px) and (max-width: 799.99px)"/>
+		<link rel="stylesheet" href="css/app/desktop.css" media="screen and (min-width: 800px)"/>
 	</head>
 	<!--El body es visual para usuario-->
 	<body>
 		<header>
-			<nav>
-				<ol>
-					<li>a</li>
-					<li>b</li>
-					<li>c</li>
-				</ol>
-			</nav>
-		</header>
-		<main>
+			<hr>
 			<section>
 				<article>
 					<h1>Aprendiendo HTML 5</h1>
+					<p>Esta pagina se hace para probar HTML y CSS</p>
+					<p>JavaScript proximamente ...</p>
 				</article>
-				<article>
-					<div>
-						<table>
+			</section>
+			<nav>
+				<hr></hr>
+				<ol class="header-nav">
+					<li class="header-nav__item">
+						<a href="https://htmlreference.io/">Mas de HTML</a>
+					</li>
+					<li class="header-nav__item">
+						<a href="https://cssreference.io/">Mas de CSS</a>
+					</li>
+				</ol>
+				<hr></hr>
+			</nav>
+		</header>
+		<main class="container center-element">
+			<section class="row">
+				<article class="col-4 mb-base">
+					<h2>Mejores cosas en con el uso de animaciones y transciones</h2>
+					<p>Poco a poco se aprende mas de HTML y CCS</p>
+					<p>Asi que este proyecto es para documentarse de como usar con el contenido y la estructura del mismo proyecto que esta compuesto de HTML y CSS</p>
+				</article>
+				<article class="col-4 mb-base">
+					<div >
+						<table class="center-element">
 							<caption><h2>Tipos de imagenes y sus diferencias</h2></caption>
 							<thead>
 								<th>Tipo de imagen</th>
@@ -49,8 +69,8 @@
 							<tbody>
 								<tr>
 									<th>Gif</th>
-									<td>Lossless</td>
-									<td>Máximo 256 colores</td>
+									<td class="text-center">Lossless</td>
+									<td class="text-center">Máximo 256 colores</td>
 									<td>
 										<ul>
 											<li>Animaciones simples</li>
@@ -60,8 +80,8 @@
 								</tr>
 								<tr>
 									<th>PNG-8</th>
-									<td>Lossless</td>
-									<td>Máximo 256 colores</td>
+									<td class="text-center">Lossless</td>
+									<td class="text-center">Máximo 256 colores</td>
 									<td>
 										<ul>
 											<li>Uso de transparencia</li>
@@ -72,8 +92,8 @@
 								</tr>
 								<tr>
 									<th>PNG-24</th>
-									<td>Lossless</td>
-									<td>Colores ilimitados</td>
+									<td class="text-center">Lossless</td>
+									<td class="text-center">Colores ilimitados</td>
 									<td>
 										<ul>
 											<li>Similar a PNG-8</li>
@@ -83,8 +103,8 @@
 								</tr>
 								<tr>
 									<th>JPG / JPEG</th>
-									<td>Lossy</td>
-									<td>Millones de colores</td>
+									<td class="text-center">Lossy</td>
+									<td class="text-center">Millones de colores</td>
 									<td>
 										<ul>
 											<li>Imágenes fijas</li>
@@ -94,8 +114,8 @@
 								</tr>
 								<tr>
 									<th>SVG</th>
-									<td>Vector/Lossless</td>
-									<td>Colores ilimitados</td>
+									<td class="text-center">Vector/Lossless</td>
+									<td class="text-center">Colores ilimitados</td>
 									<td>
 										<ul>
 											<li>Gráficos / logotipos para web</li>
@@ -113,7 +133,54 @@
 						</table>
 					</div>
 				</article>
-				<article>
+				<article class="col-4 mb-base">
+					<div>
+						<table class="center-element text-center">
+							<caption><h2>Medidas</h2></caption>
+							<thead>
+								<th>Absoluta</th>
+								<th>Relativas</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>px</td>
+									<td>%</td>
+								</tr>
+								<tr>
+									<td>mm</td>
+									<td>em</td>
+								</tr>
+								<tr>
+									<td>cm</td>
+									<td>rem (root em)</td>
+								</tr>
+								<tr>
+									<td>in</td>
+									<td>max-width /max-height</td>
+								</tr>
+								<tr>
+									<td>pc</td>
+									<td>min-width /min-height</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>vw (viewport width)</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>vh (viewport height)</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<th>Absoluta</th>
+								<th>Relativas</th>
+							</tfoot>
+						</table>
+					</div>
+				</article>
+			</section>
+			<section class="row">
+				<article class="col-4">
 					<h2>Paginas web que te optimizan imagenes</h2>
 					<hr>
 					<p>El tamaño optimo para una imagen 70 KB</p>
@@ -126,8 +193,6 @@
 						</li>
 					</ol>
 				</article>
-			</section>
-			<section>
 				<aside>
 					<h2>Paginas para imagenes</h2>
 					<hr>
@@ -141,17 +206,21 @@
 					</ol>
 				</aside>
 			</section>
-			<section>
+			<section class="row">
 				<aside>
 					<h2>Imagenes</h2>
 					<hr>
 					<figure>
-						<img src="./images/screen/small.jpg" alt="Es una imagen de una screen">
+						<picture>
+							<source media="(min-width: 1300px)" srcset="./images/screen/large.jpg">
+							<source media="(min-width: 1000px)" srcset="./images/screen/medium.jpg">
+							<img src="./images/screen/small.jpg" alt="Es una imagen de una screen" title="una imagen de prueba">
+						</picture>
 						<figcaption>Es un imagen de una screen, Foto de luis gomes en Pexels</figcaption>
 					</figure>
 				</aside>
 			</section>
-			<section>
+			<section class="row">
 				<aside>
 					<h2>Videos</h2>
 					<hr>
@@ -163,7 +232,7 @@
 					Video by Pavel Danilyuk from Pexels
 				</aside>
 			</section>
-			<section>
+			<section class="row">
 				<aside>
 					<h2>Formularios</h2>
 					<hr>

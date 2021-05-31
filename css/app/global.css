@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box; /**Hace un calculo para restarle el width y height para que no genere scroll horizontal por ejemplo*/
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%; /* 10px quedaran ya que se 16px * .625 = 10px*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --color-base-background: rgb(2, 68, 2);
+    --color-base-background-primary: teal;
+    --color-base-linear-primary: green;
+    --color-base-font: white;
+}
+
+/**
+    Metodologia BEM:
+    Es nombrar las clases siguiendo el siguiente patron
+    Bloque_Elemento-Modificador
+
+
+    Modelo de caja
+
+    Juego
+    https://flukeout.github.io
+
+    Crear el diseño desde mobile first
+    El responsive disign
+*/
+
+/*
+Selector universal *
+*/
+
+/*
+Media queries
+
+https://mediaqueri.es
+
+Son todas las tecnicas que usamos para adaptar nuestras aplicaciones web a la mayor cantidad de pantallas
+Patrones en diseños responsivo
+    * Mostly fluid (dropbox.com)
+    * Layout shifter (github.com) se logran ver distintos
+    * Colocacion de columnas colump drop (smashingmagazine.com)
+    * Tiny tweaks
+    * Off canvas
+    * Grid (dribbble.com)
+*/
+
+/*
+Pagina para ver las dimenciones
+mydevice.io
+*/

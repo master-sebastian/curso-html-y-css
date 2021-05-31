@@ -1,0 +1,186 @@
+
+
+* {
+    background-color: white;
+}
+
+.header-nav {
+    list-style: none;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    /*declaracion */
+}
+
+.header-nav__item {
+    /**
+        El elemento comparte propiedades tanto de un elemento en línea como de un elemento de bloque
+        en línea: porque el elemento se comporta como texto simple y se inserta en un bloque de texto
+        Bloquear: porque puede aplicar heighty widthvalores
+    */
+    display: inline-block;
+    padding: 1em 0.5em;
+    height: 4em;
+    /*Toma la medida mas cercana (padre) con esta propiedad y la multiplica en este caso por 1.1 (parent['font-size]  * 1.1) */
+    font-size: 1.5em;
+}
+
+/* Combinador de hijo descendiente este buscara un elemento a sin importar quienes lo contengan y aplicara las declaraciones */
+.header-nav__item a{
+    background-color: var(--color-base-background-primary);
+    padding: 1rem ;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    color: var(--color-base-font);
+    text-decoration: none; /* Estilo de la raya inferior cuando coloca el cursor*/
+    font-size: inherit; /*Heredar el valor de su padre en este caso es la propiedad del font-size del padre */
+    /*
+        1 importancia
+        2 especifidad
+            !important          (1.0.0.0.0)
+            inline style        (0.1.0.0.0) style=""
+            #id                 (0.0.1.0.0)
+            .class              (0.0.0.1.0)
+            tag                 (0.0.0.0.1)
+
+            calculadora para la especificidad
+             https://www.codecaptain.io/tools/css-specificity-calculator
+        3 Orden en las fuentes
+    */
+    border-bottom: 0.3rem solid var(--color-base-background);
+}
+
+/* 
+Pseudo clases
+    :class
+    Define el estilo de un ¡estado! especial de un elemento
+    https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+*/
+
+/*Cuando lo mantenga precionado aplique lo siguiente estilos al elemento*/
+.header-nav__item a:active{
+    color: green;
+}
+
+/*Cuando lo mantenga el cursor sin precionar aplique lo siguiente estilos al elemento*/
+.header-nav__item a:hover{
+    color: rgb(255, 255, 255);
+    font-style: unset;
+    border-bottom: 7px solid var(--color-base-background);
+}
+
+.header-nav__item a:hover::after {
+    content: "👍";
+}
+
+/* 
+Pseudo elementos
+    ::elemento
+    Define el estilo de ¡una parte! especifica de un elemento
+    https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
+*/
+
+.header-nav__item a::after{
+    content: ' ✔';
+}
+
+/* Combinador hermano adyacente o cercano osea tiene que estar justo abajo de el*/
+h1 + p, h1 + p + p {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 0.2rem solid var(--color-base-linear-primary);
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 + p::after{
+    content: " ✔";
+    color:green;
+}
+
+h1 + p + p::after{
+    content: " 🎈";
+    color:green;
+}
+
+hr{
+    border-top: 2px solid var(--color-base-linear-primary);
+}
+ 
+
+/* Combinador general osea tiene que estar justo abajo de el y su hermano directo en te caso p compatira los estilos*/
+h2 ~ p{
+    margin-top: 2px;
+    padding-top: 5px;
+    border-top: 2px solid var(--color-base-linear-primary);
+    font-style: normal;
+    font-weight: inherit;
+    text-align: center;
+}
+
+h2 ~ p::after{
+    content: "✔";
+    color:red;
+}
+
+/* Combinador de hijo directo*/
+article > h1  {
+    font-size: 5rem;
+}
+
+article > h1 , article > h2 , article > h3{
+    text-align: center;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.col-4{
+    flex: 0 0 auto;
+    width: calc(4*100%/12);
+}
+
+td,th{
+    padding: 5px;
+}
+
+
+.mb-base{
+    margin-bottom: 1.5rem;
+}
+.center-element{
+    width: 90%;
+    margin: 10px auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+thead, tfoot, table > caption{
+    background-color: var(--color-base-background-primary);
+    color: var(--color-base-font);
+}
+
+table {
+    border-spacing: 0px;
+}
+* h1{
+    font-size: 0.5rem;
+    background-color: blueviolet;
+}
